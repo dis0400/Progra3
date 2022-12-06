@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AM</string>
+    <string name="confirmacion">Su confirmacion se ha realizado con exito.</string>
 </resources>
