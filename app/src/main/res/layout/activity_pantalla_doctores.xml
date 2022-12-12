@@ -17,7 +17,7 @@
     <View
         android:layout_width="345dp"
         android:layout_height="139dp"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="19dp"
         tools:layout_editor_absoluteY="70dp" />
 
     <TextView
@@ -83,7 +83,7 @@
         android:layout_height="96dp"
         android:layout_margin="25dp"
         android:background="@drawable/userdoc"
-        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="223dp"
         tools:ignore="MissingConstraints" />
 
@@ -127,9 +127,14 @@
         android:layout_margin="25dp"
         android:background="@drawable/userdoc"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="383dp" />
 
+    <View
+        android:layout_width="342dp"
+        android:layout_height="140dp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="353dp" />
 
     <TextView
         android:id="@+id/TextNombreLugar3"
