@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="button">
+        <item name="cornerRadius">40dp</item>
+        <item name="backgroundTint">#3E7EEF</item>
+        </style>
+        <style name="home_button" parent="button">
+            <item name="android:layout_margin">10dp</item>
+        </style>
+
 </resources>

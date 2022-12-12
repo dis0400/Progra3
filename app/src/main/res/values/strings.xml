@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">AM</string>
     <string name="confirmacion">Su confirmacion se ha realizado con exito.</string>
+
+    <!-- Pantalla Login -->
+    <string name="login">Ingresar</string>
+    <string name="email">Ingresa tu correo</string>
+    <string name="password">Ingresa tu contraseña</string>
+    <string name="firstname">Nombre</string>
+    <string name="lastname">Apellido</string>
+
+
 </resources>
