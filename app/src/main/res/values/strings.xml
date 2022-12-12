@@ -6,8 +6,10 @@
     <string name="login">Ingresar</string>
     <string name="email">Ingresa tu correo</string>
     <string name="password">Ingresa tu contraseña</string>
-    <string name="firstname">Nombre</string>
-    <string name="lastname">Apellido</string>
+    <string name="firstname">Ingresa tu nombre</string>
+    <string name="lastname">Ingresa tu apellido</string>
+    <string name="newpass">Ingresa tu nueva contraseña</string>
+    <string name="phone">Ingresa tu numero de celular</string>
 
 
 </resources>

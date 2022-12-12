@@ -3,9 +3,9 @@ package com.grupod.am
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Doc1 : AppCompatActivity() {
+class CrearCuenta : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_doc1)
+        setContentView(R.layout.activity_crear_cuenta)
     }
 }
