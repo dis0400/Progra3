@@ -5,6 +5,10 @@ plugins {
 }
 
 android {
+    viewBinding {
+        enabled = true
+    }
+
     namespace 'com.grupod.am'
     compileSdk 32
 

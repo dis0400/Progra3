@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">AM</string>
-    <string name="nombre1">Juan Zeballos Ortega</string>
-    <string name="lugar1">Clinica DE¿el Sur</string>
+    <string name="confirmacion">Su confirmacion se ha realizado con exito.</string>
 
+    <!-- Pantalla Login -->
+    <string name="login">Ingresar</string>
+    <string name="email">Ingresa tu correo</string>
+    <string name="password">Ingresa tu contraseña</string>
+    <string name="firstname">Ingresa tu nombre</string>
+    <string name="lastname">Ingresa tu apellido</string>
+    <string name="newpass">Ingresa tu nueva contraseña</string>
+    <string name="phone">Ingresa tu numero de celular</string>
+
+    <string name="edad">Ingrese su fecha de nacimiento</string>
+    <string name="form">FORMULARIO</string>
+    <string name="datos">COLOQUE LOS DATOS PERSONALES DEL PACIENTE</string>
+
+    <string name="confirm">CONFIRMAR</string>
 </resources>
