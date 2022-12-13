@@ -9,8 +9,8 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
-    private lateinit var binding: ActivityLoginBinding
-    private lateinit var auth: FireBaseAuth
-    var currentUser: FirebaseUser?
-     override fun OnCreateContextMenuListener
+    //private lateinit var binding: ActivityLoginBinding
+    //private lateinit var auth: FireBaseAuth
+    //var currentUser: FirebaseUser?
+     //override fun OnCreateContextMenuListener
 }
