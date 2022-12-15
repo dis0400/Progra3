@@ -33,7 +33,7 @@ class Login : AppCompatActivity() {
                 buttonLogin.setOnClickListener{
                     val email = edittextMail.text.toString()
                     val password= editTextPASS.text.toString()
-                    if(validData(email, password))){
+                    if(validData(email, password)){
                     loginUser(email, password)}
                 }
             buttonCrear.setOnClickListener{
@@ -52,6 +52,32 @@ class Login : AppCompatActivity() {
             }
         }
 
+    private fun createNewUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this){task->
+            if (task.isSuccessful){
+                sendToast("New User Created")
+            }else{
+                sendToast("Error")
+            }
+        }
+
+    }
+
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this){task ->
+            if (task.isSuccessful){
+                redirectActivity()
+            }else{
+                sendToast("Error")
+            }
+
+        }
+    }
+
+    private fun sendToast(text: String) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    }
+
     private fun validData(email: String, password: String): Boolean {
         var valid = true
         if(email.isEmpty()){
@@ -59,7 +85,7 @@ class Login : AppCompatActivity() {
             showMessage("Ingrese un correo")
         }else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             valid = false
-            showMessage("Ingrsa un correo valido")
+            showMessage("Ingresa un correo valido")
         }else if (password.isEmpty()){
             valid= false
             showMessage("Ingresa Contrasena")
