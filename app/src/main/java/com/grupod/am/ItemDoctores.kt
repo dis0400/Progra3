@@ -3,10 +3,9 @@ package com.grupod.am
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class formulario : AppCompatActivity() {
+class ItemDoctores : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_formulario)
-
+        setContentView(R.layout.activity_item_doctores)
     }
 }
