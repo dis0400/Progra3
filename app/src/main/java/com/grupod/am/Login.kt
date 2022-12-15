@@ -1,8 +1,10 @@
 package com.grupod.am
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.OnCreateContextMenuListener
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.ktx.Firebase
@@ -13,7 +15,7 @@ import com.grupod.am.databinding.ActivityLoginBinding
 class Login : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var binding: ActivityCrearCuentaBinding
+    private lateinit var binding: ActivityLoginBinding
     var currentUser: FirebaseUser?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,17 +25,59 @@ class Login : AppCompatActivity() {
         setContentView(binding.root)
         initUi()
     }
-    private fun initUi{
+    private fun initUi(){
         auth=FirebaseAuth.getInstance()
         currentUser= auth.currentUser
 
         binding.run {
-
+                buttonLogin.setOnClickListener{
+                    val email = edittextMail.text.toString()
+                    val password= editTextPASS.text.toString()
+                    if(validData(email, password))){
+                    loginUser(email, password)}
+                }
+            buttonCrear.setOnClickListener{
+                val email = edittextMail.text.toString()
+                val password = editTextPASS.text.toString()
+                if(validData(email,password)){
+                    createNewUser(email,password)}
+            }
+            buttonIngresardirect.setOnClickListener{
+                if (currentUser!= null) {
+                    redirectActivity()
+                }else{
+                    showMessage("Debes iniciar sesion antes")
+                }
+            }
             }
         }
+
+    private fun validData(email: String, password: String): Boolean {
+        var valid = true
+        if(email.isEmpty()){
+            valid=false
+            showMessage("Ingrese un correo")
+        }else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            valid = false
+            showMessage("Ingrsa un correo valido")
+        }else if (password.isEmpty()){
+            valid= false
+            showMessage("Ingresa Contrasena")
+        }else if (password.length < 8){
+            valid=false
+            showMessage("La contrasena debe tener 8 digitos")
+        }
+        return  valid
     }
-    //private lateinit var binding: ActivityLoginBinding
-    //private lateinit var auth: FireBaseAuth
-    //var currentUser: FirebaseUser?
-     //override fun OnCreateContextMenuListener
+
+    private fun showMessage(message: String) {
+        Toast.makeText(this,message, Toast.LENGTH_SHORT).show()
+
+    }
+    private fun redirectActivity(){
+        val intentRedirect = Intent(this, Formulario::class.java)
+        startActivity(intentRedirect)
+        finish()
+    }
 }
+
