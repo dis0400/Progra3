@@ -3,7 +3,7 @@
     <string name="confirmacion">Su confirmacion se ha realizado con exito.</string>
 
     <!-- Pantalla Login -->
-    <string name="login">Ingresar</string>
+    <string name="login">Ingresar Directamente</string>
     <string name="email">Ingresa tu correo</string>
     <string name="password">Ingresa tu contraseña</string>
     <string name="firstname">Ingresa tu nombre</string>
@@ -16,4 +16,13 @@
     <string name="datos">COLOQUE LOS DATOS PERSONALES DEL PACIENTE</string>
 
     <string name="confirm">CONFIRMAR</string>
+
+    <string name="error_email">Ingresa un correo válido</string>
+    <string name="error_password">Ingresa una contraseña válida\nMin. 6 caractéres</string>
+    <string name="error_name">Ingresa un nombre válido</string>
+    <string name="error_year">Ingresa una fecha válida \nLa fecha debe ser Día/Mes/Año \nEdad mínima 16</string>
+    <string name="wrong_password">Las contraseñas no coinciden</string>
+    <string name="error_phone">Ingresa un teléfono válido \nDebe contener 10 números</string>
+    <string name="email_not_found">No se encuentra la cuenta</string>
+    <string name="email_not_match">Contraseña incorrecta</string>
 </resources>

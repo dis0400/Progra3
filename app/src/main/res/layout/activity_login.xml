@@ -70,6 +70,7 @@
             app:layout_constraintVertical_bias="0.618" />
 
         <Button
+            android:id="@+id/buttonIngresardirect"
             style="@style/button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -85,6 +86,7 @@
             app:layout_constraintVertical_bias="0.739" />
 
         <Button
+            android:id="@+id/buttonCrear"
             style="@style/button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -99,6 +101,7 @@
             app:layout_constraintVertical_bias="0.837" />
 
         <Button
+            android:id="@+id/buttonLogin"
             style="@style/button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
