@@ -6,44 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".pantalla_horarios">
 
-    <ImageView
-        android:id="@+id/image_user"
-        android:layout_width="101dp"
-        android:layout_height="96dp"
-        android:layout_margin="25dp"
-        android:background="@drawable/userdoc"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="85dp" />
-
-    <TextView
-        android:id="@+id/TextNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lugar: Clinica del Sur"
-        android:textColor="@color/black"
-        app:layout_contrainGuide
-        tools:ignore="MissingContraints"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="121dp" />
-
-    <TextView
-        android:id="@+id/TextNombrePaciente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Juan Zeballos Ortega"
-        android:textColor="@color/black"
-        app:layout_contrainGuide
-        tools:ignore="MissingContraints"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="85dp" />
-
-    <TextView
-        android:id="@+id/TextReserva"
-        android:layout_width="82dp"
-        android:layout_height="27dp"
-        android:text="AGENDAR"
-        android:textColor="@color/black" />
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="HORARIOS"/>
 
     <RadioGroup
         android:id="@+id/radio_group"

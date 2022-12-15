@@ -8,13 +8,15 @@
     android:backgroundTint="@color/white"
     android:elevation="2dp"
     tools:context=".ItemDoctores">
+
     <LinearLayout
         android:id="@+id/dr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:id="@+id/FullName"
             android:layout_width="match_parent"

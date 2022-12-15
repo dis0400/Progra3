@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorTextSecond"
+    android:background="white"
     tools:context=".pantalla_especialidades">
 
     <LinearLayout
@@ -26,18 +26,19 @@
             android:layout_margin="10dp"
             android:text="MeDates"
             android:textAlignment="center"
-            android:textSize="40sp"/>
+            android:textSize="40sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:text="Escoge una especialidad para agendar"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:entries="@array/icon" />
+            android:layout_margin="10dp" />
     </LinearLayout>
 </LinearLayout>
