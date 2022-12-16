@@ -10,7 +10,7 @@ import com.grupod.am.databinding.ActivityPantallaHorariosBinding
 
 class pantalla_horarios : AppCompatActivity() {
     private lateinit var binding: ActivityPantallaHorariosBinding
-    private lateinit var preferences: SharedPreferences
+    private lateinit var preference: SharedPreferences
     var radioSelected=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,25 +21,21 @@ class pantalla_horarios : AppCompatActivity() {
     }
     fun manageRadioButton() {
         binding.run {
-            radioButtonOne.setOnClickListener {
-                if (manageRadioButton.isChecked)
-                    Toast.makeText(
-                        this@pantalla_horarios,
-                        "Se guardo el horario seleccionado",
-                        Toast.LENGTH_SHORT
-                    ).show()
+            radiolButtonOne.setOnClickListener {
+                if (radiolButtonOne.isChecked)
+                    Toast.makeText(this@pantalla_horarios, "Se guardo el horario seleccionado", Toast.LENGTH_SHORT).show()
             }
         }
     }
     fun managePreferences() {
         val id = "ID"
         preference = PreferenceManager.getDefaultSharedPreferences(this)
-        binding.buttonSave.setOnClickListener {
-            val  editor = preferences.edit()
+        binding.buttonSave2.setOnClickListener {
+            val  editor = preference.edit()
             var savedData = ""
-            if (binding.checkbox.isCheked)
-                savedData= "$radioSelected"
-            )
+            savedData= radioSelected
+            editor.putString(id,savedData)
+            editor.apply()
         }
 
 

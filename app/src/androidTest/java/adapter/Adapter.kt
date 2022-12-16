@@ -3,7 +3,7 @@ package adapter
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
-import android.view.Prefere
+import android.view.Prefereces
 import com.grupod.am.ItemDoctores
 import com.grupod.am.databinding.ActivityItemDoctoresBinding
 import kotlin.coroutines.coroutineContext

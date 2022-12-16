@@ -17,6 +17,13 @@
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="96dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/userdoc" />
+
         <TextView
             android:id="@+id/FullName"
             android:layout_width="match_parent"

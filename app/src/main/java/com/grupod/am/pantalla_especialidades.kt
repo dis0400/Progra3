@@ -3,26 +3,28 @@ package com.grupod.am
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.AdapterView
-import android.widget.AdapterView.OnItemSelectedListener
+import androidx.preference.PreferenceManager
+import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.grupod.am.R
+import com.grupod.am.databinding.ActivityPantallaEspecialidadesBinding
+
 
 class pantalla_especialidades : AppCompatActivity() {
 
     private lateinit var binding: pantalla_especialidades
-    private lateinit var prefereces: SharedPreferences
+    private lateinit var preferece: SharedPreferences
     var spinnerSelect: ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val pantalla_especialidades
-        binding= pantalla_especialidades.inflate(layoutInflater)
+        binding= ActivityPantallaEspecialidadesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initSpinner()
+        managePreferences()
     }
 
     fun initSpinner() {
@@ -38,20 +40,26 @@ class pantalla_especialidades : AppCompatActivity() {
             dataList
         )
 
-        binding.spinner.adapter = adapter
-        binding.spinner.onItemSelectedListener = object
-        AdapterView.OnItemSelectedListener {
+        binding.spinnerSelect.adapter = adapter
+        binding.spinnerSelect.onItemSelectedListener = object:
+            AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-                binding.textViewSelected.spinner.text = dataList[position]
+                binding.textViewSelectedSpinner.text = dataList[position]
                 spinnerSelect = dataList[position]
+                Toast.makeText(this@pantalla_especialidades,"Seleccionaste una especialidad",Toast.LENGTH_SHORT).show();
+            }
+            override fun OnNothingSelected(p0: AdapterView<*>?){
+                }
+
+
             }
         }
     }
     fun managePreferences() {
         val id = "ID"
-        preferences = PreferenceManager.getDefaultSharedPreferences(this)
+        preferece = PreferenceManager.getDefaultSharedPreferences(this)
         binding.buttonSave.setOnClickListener {
-            val editor = preferences.edit()
+            val editor = preferece.edit()
             var savedData = ""
             if (binding.checkbox.isCheked)
                 savedData = "$spinnerSelect"
