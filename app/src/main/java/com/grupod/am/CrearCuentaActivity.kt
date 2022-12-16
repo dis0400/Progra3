@@ -3,6 +3,7 @@ package com.grupod.am
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -68,7 +69,7 @@ class CrearCuentaActivity : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun redirectActivity() {
+    fun redirectActivity() {
         val intentRedirect = Intent(this, MainActivity::class.java)
         startActivity(intentRedirect)
         finish()
