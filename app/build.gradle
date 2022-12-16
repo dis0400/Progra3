@@ -8,6 +8,9 @@ android {
     viewBinding {
         enabled = true
     }
+    buildFeatures {
+        viewBinding true
+    }
 
     namespace 'com.grupod.am'
     compileSdk 32

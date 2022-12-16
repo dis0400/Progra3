@@ -3,16 +3,12 @@ package com.grupod.am
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View.OnCreateContextMenuListener
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.ktx.Firebase
-import com.grupod.am.databinding.ActivityCrearCuentaBinding
-import com.grupod.am.databinding.ActivityFormularioBinding
 import com.grupod.am.databinding.ActivityLoginBinding
 
-class Login : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: ActivityLoginBinding
@@ -100,7 +96,7 @@ class Login : AppCompatActivity() {
 
     }
     private fun redirectActivity(){
-        val intentRedirect = Intent(this, Formulario::class.java)
+        val intentRedirect = Intent(this, FormularioActivity::class.java)
         startActivity(intentRedirect)
         finish()
     }

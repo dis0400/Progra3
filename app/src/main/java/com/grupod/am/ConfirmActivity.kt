@@ -3,7 +3,7 @@ package com.grupod.am
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Confirm : AppCompatActivity() {
+class ConfirmActivity : AppCompatActivity() {
     companion object {
         var NOMBRE: String = "name"
         var APELLIDO: String = "lastname"
