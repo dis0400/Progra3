@@ -1,11 +1,13 @@
 package com.grupod.am
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.widget.Toast
+import com.grupod.am.databinding.ActivityFormularioBinding
 import com.grupod.am.databinding.ActivityPantallaHorariosBinding
 
 class pantalla_horarios : AppCompatActivity() {
@@ -30,16 +32,24 @@ class pantalla_horarios : AppCompatActivity() {
     fun managePreferences() {
         val id = "ID"
         preference = PreferenceManager.getDefaultSharedPreferences(this)
-        binding.buttonSave2.setOnClickListener {
+        binding.ButtonSave.setOnClickListener {
             val  editor = preference.edit()
             var savedData = ""
             savedData= radioSelected
             editor.putString(id,savedData)
             editor.apply()
         }
-
-
-
-
+        binding.buttonContinuar.setOnClickListener {
+            val intent = Intent(this, ActivityFormulario:: class.java)
+            intent.apply {
+                
+            }
+        }
+        binding.buttonDelete.setOnClickListener {
+            val editor = preference.edit()
+            editor.remove(id)
+            editor.apply()
+        }
     }
+
 }

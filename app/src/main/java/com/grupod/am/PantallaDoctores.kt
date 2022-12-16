@@ -22,16 +22,17 @@ class PantallaDoctores : AppCompatActivity() {
         setContentView(binding.root)
         setRecycleView()
     }
-    fun setRecycleView(){
+    fun setRecycleView() {
 
-        val mutableList= mutableListOf<String>()
+        val mutableList = mutableListOf<String>()
         mutableList.add("Jorge Rene Gutierrez Sandi")
         mutableList.add("Katherine Erika Rodriguez Ortiz")
         mutableList.add("Volkmar Jose Bauer Barragan")
         mutableList.add("Elenea Cristina Cuellar Zumaran")
+
         DoctoresAdapter.addPantallaDoctores(mutableList)
 
-         val mutableList2= mutableListOf<String>()
+        val mutableList2 = mutableListOf<String>()
         mutableList2.add("Medicina General")
         mutableList2.add("Pediatría")
         mutableList2.add("Odontología")
@@ -44,6 +45,7 @@ class PantallaDoctores : AppCompatActivity() {
         mutableList3.add("Hospital de Clinicas")
         mutableList3.add("Hospital Materno Infantil")
         DoctoresAdapter3.addPantallaDoctores(mutableList3)
+    }
 
         binding.recycleExample.apply {
             layoutManager =

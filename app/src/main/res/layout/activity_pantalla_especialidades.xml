@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="623dp"
+        android:layout_height="727dp"
         android:layout_gravity="center"
         android:orientation="vertical">
 
@@ -47,11 +47,22 @@
             android:layout_margin="10dp" />
 
         <Button
+            android:id="@+id/VerConfirmacion"
             style="@style/button"
             android:layout_width="192dp"
             android:layout_height="46dp"
-            android:layout_margin="50dp"
             android:layout_gravity="center"
+            android:layout_margin="70dp"
             android:text="Ver confirmación" />
+
+        <Button
+            android:id="@+id/Continuar"
+            style="@style/button"
+            android:layout_width="196dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:text="Continuar" />
+
     </LinearLayout>
 </LinearLayout>

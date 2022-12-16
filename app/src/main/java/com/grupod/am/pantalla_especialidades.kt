@@ -1,5 +1,6 @@
 package com.grupod.am
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -52,6 +53,7 @@ class pantalla_especialidades : AppCompatActivity() {
             }
             }
         }
+
     fun managePreferences(){
         val id = "nuestro_Id"
         preferences=PreferenceManager.getDefaultSharedPreferences(this)
@@ -62,5 +64,13 @@ class pantalla_especialidades : AppCompatActivity() {
         editor.putString(id, savedData)
         editor.apply()
         }
+        binding.Continuar.setOnClickListener {
+        val intent = Intent( this, PantallaDoctores::class.java)
+            startActivity(intent)
     }
+        binding.VerConfirmacion.setOnClickListener {
+        val intent = Intent(this, ConfirmActivity::class.java)
+        startActivity(intent)
+    }
+        }
     }
