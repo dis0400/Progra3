@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Formulario">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,12 +12,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/formulari"
@@ -27,7 +25,7 @@
                 android:background="#3E7EEF"
                 android:gravity="center"
                 android:text="@string/form"
-                android:textColor="@color/colorTextPrimary"
+                android:textColor="@color/black"
                 android:textSize="40dp"
                 tools:ignore="MissingConstraints" />
 
@@ -35,12 +33,11 @@
                 android:id="@+id/personales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorTextPrimary"
                 android:text="@string/datos"
-                android:textColor="@color/background"
                 android:textSize="20dp"
+                android:textColor="@color/white"
+                android:background="@color/black"
                 tools:ignore="MissingConstraints" />
-
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
@@ -48,7 +45,6 @@
                 android:layout_margin="10dp"
                 android:text="Nombre:"
                 android:textSize="20sp" />
-
             <EditText
                 android:id="@+id/edittextName"
                 android:layout_width="match_parent"
@@ -57,7 +53,6 @@
                 android:hint="@string/firstname"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName" />
-
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -65,7 +60,6 @@
                 android:layout_margin="10dp"
                 android:text="Apellido:"
                 android:textSize="20dp" />
-
             <EditText
                 android:id="@+id/editLastname"
                 android:layout_width="match_parent"
@@ -73,8 +67,24 @@
                 android:ems="10"
                 android:hint="@string/lastname"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
+                android:inputType="textPersonName"/>
+            <TextView
+                android:id="@+id/edad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="Fecha de nacimiento:"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/editEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:hint="@string/edad"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:maxLines="1"
+                />
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
@@ -82,7 +92,6 @@
                 android:layout_margin="10dp"
                 android:text="Celular:"
                 android:textSize="20sp" />
-
             <EditText
                 android:id="@+id/editphone"
                 android:layout_width="match_parent"
@@ -90,8 +99,7 @@
                 android:ems="10"
                 android:hint="@string/phone"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
+                android:inputType="textPersonName"/>
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
@@ -99,7 +107,6 @@
                 android:layout_margin="10dp"
                 android:text="Correo:"
                 android:textSize="20sp" />
-
             <EditText
                 android:id="@+id/editmail"
                 android:layout_width="match_parent"
@@ -107,8 +114,7 @@
                 android:ems="10"
                 android:hint="@string/email"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName" />
-
+                android:inputType="textPersonName"/>
             <Button
                 android:id="@+id/form"
                 style="@style/button"
@@ -116,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="30dp"
                 android:text="@string/confirm"
-                android:textSize="20dp" />
+                android:textSize="20dp"/>
 
 
         </LinearLayout>
