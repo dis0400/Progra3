@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="76dp"
-            android:background="@color/Blue"
+            android:background="@color/blue"
             android:text="HORARIOS DISPONIBLES"
             android:textColor="@color/black"
             android:textSize="35dp" />
@@ -63,6 +63,7 @@
                 android:textSize="17sp" />
 
             <Button
+                style="@style/button"
                 android:id="@+id/button_Continuar"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"
@@ -70,15 +71,9 @@
                 android:layout_margin="80dp"
                 android:text="CONTINUAR" />
 
-            <Button
-                android:id="@+id/Button_Save"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_margin="80dp"
-                android:text="GUARDAR" />
 
             <Button
+                style="@style/button"
                 android:id="@+id/button_delete"
                 android:layout_width="match_parent"
                 android:layout_height="68dp"

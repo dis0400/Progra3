@@ -1,5 +1,6 @@
 package com.grupod.am
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,11 +31,20 @@ class horario3 : AppCompatActivity() {
     fun managePreferences() {
         val id = "ID"
         preference = PreferenceManager.getDefaultSharedPreferences(this)
-        binding.buttonSave2.setOnClickListener {
+        binding.radioGroup.setOnClickListener {
             val  editor = preference.edit()
             var savedData = ""
             savedData= radioSelected
             editor.putString(id,savedData)
+            editor.apply()
+        }
+        binding.buttonContin.setOnClickListener {
+            val intent = Intent(this, FormularioActivity:: class.java)
+            startActivity(intent)
+        }
+        binding.buttonDelete.setOnClickListener {
+            val editor = preference.edit()
+            editor.remove(id)
             editor.apply()
         }
 

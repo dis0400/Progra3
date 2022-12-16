@@ -99,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
     private fun redirectActivity(){
-        val intentRedirect = Intent(this, FormularioActivity::class.java)
+        val intentRedirect = Intent(this, PantallaDoctores::class.java)
         startActivity(intentRedirect)
         finish()
     }

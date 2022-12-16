@@ -56,7 +56,7 @@ class pantalla_especialidades : AppCompatActivity() {
 
     fun managePreferences(){
         val id = "nuestro_Id"
-        preferences=PreferenceManager.getDefaultSharedPreferences(this)
+        preferences = PreferenceManager.getDefaultSharedPreferences(this)
         binding.spinner.setOnClickListener{ this
         val editor = preferences.edit()
         var savedData = ""

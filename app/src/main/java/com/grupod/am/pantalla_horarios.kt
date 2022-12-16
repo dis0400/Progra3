@@ -32,7 +32,7 @@ class pantalla_horarios : AppCompatActivity() {
     fun managePreferences() {
         val id = "ID"
         preference = PreferenceManager.getDefaultSharedPreferences(this)
-        binding.ButtonSave.setOnClickListener {
+        binding.radioGroup.setOnClickListener {
             val  editor = preference.edit()
             var savedData = ""
             savedData= radioSelected
@@ -40,7 +40,7 @@ class pantalla_horarios : AppCompatActivity() {
             editor.apply()
         }
         binding.buttonContinuar.setOnClickListener {
-            val intent = Intent(this, ActivityFormulario:: class.java)
+            val intent = Intent(this, FormularioActivity:: class.java)
             intent.apply {
                 
             }
