@@ -16,7 +16,7 @@ class pantalla_especialidades : AppCompatActivity() {
 
     private lateinit var binding: ActivityPantallaEspecialidadesBinding
     private lateinit var preferences: SharedPreferences
-    var spinnerSelected: ""
+    var spinnerSelected=""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +47,9 @@ class pantalla_especialidades : AppCompatActivity() {
                 spinnerSelected = dataList[position]
                 Toast.makeText(this@pantalla_especialidades,"Seleccionaste una especialidad",Toast.LENGTH_SHORT).show();
             }
-            override fun OnNothingSelected(p0: AdapterView<*>?){
-                }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+            }
             }
         }
     fun managePreferences(){
