@@ -2,6 +2,8 @@
     <string name="app_name">AM</string>
     <string name="confirmacion">Su confirmacion se ha realizado con exito.</string>
 
+    <string name="tittlename"><b>Nombre: </b></string>
+
     <!-- Pantalla Login -->
     <string name="login">Ingresar Directamente</string>
     <string name="email">Ingresa tu correo</string>

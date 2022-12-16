@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         initUi()
     }
     private fun initUi(){
-        auth=FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
         currentUser= auth.currentUser
 
         binding.run {
@@ -32,12 +32,6 @@ class LoginActivity : AppCompatActivity() {
                     if(validData(email, password)){
                     loginUser(email, password)}
                 }
-            /*buttonCrear.setOnClickListener{
-                val email = edittextMail.text.toString()
-                val password = editTextPASS.text.toString()
-                if(validData(email,password)){
-                    createNewUser(email,password)}
-            }*/
             buttonIngresardirect.setOnClickListener{
                 if (currentUser!= null) {
                     redirectActivity()
@@ -45,19 +39,28 @@ class LoginActivity : AppCompatActivity() {
                     showMessage("Debes iniciar sesion antes de ingresar")
                 }
             }
+            buttonCrear.setOnClickListener{
+                val email=edittextMail.text.toString()
+                val password= editTextPASS.text.toString()
+                if (validData(email, password)){
+                    createNewUser(email, password)
+                }
+            }
             }
         }
 
     private fun createNewUser(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this){task->
-            if (task.isSuccessful){
-                sendToast("New User Created")
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){task ->
+            if(task.isSuccessful){
+                sendToast("Usuario Creado")
+               redirectActivityNEW()
             }else{
                 sendToast("Error")
             }
-        }
 
+        }
     }
+
     private fun loginUser(email: String, password: String) {
         auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this){task ->
             if (task.isSuccessful){
@@ -97,6 +100,11 @@ class LoginActivity : AppCompatActivity() {
     }
     private fun redirectActivity(){
         val intentRedirect = Intent(this, FormularioActivity::class.java)
+        startActivity(intentRedirect)
+        finish()
+    }
+    private fun redirectActivityNEW(){
+        val intentRedirect = Intent(this, CrearCuentaActivity::class.java)
         startActivity(intentRedirect)
         finish()
     }

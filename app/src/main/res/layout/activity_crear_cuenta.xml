@@ -5,34 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CrearCuentaActivity">
-    
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="20dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:contentDescription="@string/login"
                 app:srcCompat="@drawable/usuaario"
-                tools:layout_editor_absoluteY="85dp"
-                tools:ignore="MissingConstraints"/>
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="85dp" />
+
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:text="Nombre:"
+                android:text="@string/tittlename"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/edittextName"
                 android:layout_width="match_parent"
@@ -41,6 +47,7 @@
                 android:hint="@string/firstname"
                 android:importantForAutofill="no"
                 android:inputType="textPersonName" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -48,6 +55,7 @@
                 android:layout_margin="10dp"
                 android:text="Apellido:"
                 android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/editLastname"
                 android:layout_width="match_parent"
@@ -55,7 +63,8 @@
                 android:ems="10"
                 android:hint="@string/lastname"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName"/>
+                android:inputType="textPersonName" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
@@ -63,6 +72,7 @@
                 android:layout_margin="10dp"
                 android:text="Celular:"
                 android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/editphone"
                 android:layout_width="match_parent"
@@ -70,7 +80,8 @@
                 android:ems="10"
                 android:hint="@string/phone"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName"/>
+                android:inputType="textPersonName" />
+
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
@@ -78,6 +89,7 @@
                 android:layout_margin="10dp"
                 android:text="Correo:"
                 android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/editmail"
                 android:layout_width="match_parent"
@@ -85,7 +97,8 @@
                 android:ems="10"
                 android:hint="@string/email"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName"/>
+                android:inputType="textPersonName" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
@@ -101,7 +114,8 @@
                 android:ems="10"
                 android:hint="@string/password"
                 android:importantForAutofill="no"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
+
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
@@ -109,6 +123,7 @@
                 android:layout_margin="10dp"
                 android:text="Confirmar Contraseña:"
                 android:textSize="20sp" />
+
             <EditText
                 android:id="@+id/editTextConfimPass"
                 android:layout_width="match_parent"
@@ -116,14 +131,22 @@
                 android:ems="10"
                 android:hint="Password"
                 android:importantForAutofill="no"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword" />
+
             <Button
                 android:id="@+id/buttonNew"
                 style="@style/button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="buttonForm"
-                android:text="GUARDAR"/>
+                android:text="GUARDAR" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:background="@color/white"/>
+
         </LinearLayout>
 
     </ScrollView>
