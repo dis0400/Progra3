@@ -32,7 +32,6 @@ class CrearCuentaActivity : AppCompatActivity() {
                 if (validateData(email, password))
                     createNewUser(email, password)
             }
-
         }
     }
 
