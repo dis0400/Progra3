@@ -19,32 +19,18 @@ class Formulario : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityFormularioBinding
-    lateinit var formus: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        formus.addTextChangedListener{
-                text -> Log.d("llene datos", text.toString())
-        }
-
-        binding=ActivityFormularioBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-
-        val form = binding.form
-        form.setOnClickListener{
-            Toast.makeText(this, "Su formulario esta completo", Toast.LENGTH_SHORT).show()
-        }
 
         binding.form.setOnClickListener {
             val intent = Intent(this, Confirm::class.java)
             intent.apply {
                 putExtra(NOMBRE,binding.edittextName.text.toString())
                 putExtra(APELLIDO,binding.editLastname.text.toString())
-                putExtra(NOMBRE,)
-                putExtra(NOMBRE,)
-                putExtra(NOMBRE,)
+                putExtra(FECHA,binding.editEdad.text.toString())
+                putExtra(CELULAR,binding.editphone.text.toString())
+                putExtra(CORREO,binding.editmail.text.toString())
             }
             startActivity(intent)
         }

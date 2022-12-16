@@ -16,5 +16,9 @@ class Confirm : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirm)
         val nombre = intent.getStringExtra(NOMBRE)
+        val apellido = intent.getStringExtra(APELLIDO)
+        val fecha = intent.getStringExtra(FECHA)
+        val celular = intent.getStringExtra(CELULAR)
+        val email = intent.getStringExtra(CORREO)
     }
 }
