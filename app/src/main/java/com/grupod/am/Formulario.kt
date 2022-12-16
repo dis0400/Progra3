@@ -10,7 +10,13 @@ import androidx.core.widget.addTextChangedListener
 import com.grupod.am.databinding.ActivityFormularioBinding
 
 class Formulario : AppCompatActivity() {
-
+    companion object{
+        var NOMBRE:String="name"
+        var APELLIDO:String="lastname"
+        var FECHA:String="date"
+        var CELULAR:String="phone"
+        var CORREO:String="email"
+    }
 
     private lateinit var binding: ActivityFormularioBinding
     lateinit var formus: EditText
@@ -33,6 +39,13 @@ class Formulario : AppCompatActivity() {
 
         binding.form.setOnClickListener {
             val intent = Intent(this, Confirm::class.java)
+            intent.apply {
+                putExtra(NOMBRE,binding.edittextName.text.toString())
+                putExtra(APELLIDO,binding.editLastname.text.toString())
+                putExtra(NOMBRE,)
+                putExtra(NOMBRE,)
+                putExtra(NOMBRE,)
+            }
             startActivity(intent)
         }
 

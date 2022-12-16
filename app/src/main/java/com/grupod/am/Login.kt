@@ -36,17 +36,17 @@ class Login : AppCompatActivity() {
                     if(validData(email, password)){
                     loginUser(email, password)}
                 }
-            buttonCrear.setOnClickListener{
+            /*buttonCrear.setOnClickListener{
                 val email = edittextMail.text.toString()
                 val password = editTextPASS.text.toString()
                 if(validData(email,password)){
                     createNewUser(email,password)}
-            }
+            }*/
             buttonIngresardirect.setOnClickListener{
                 if (currentUser!= null) {
                     redirectActivity()
                 }else{
-                    showMessage("Debes iniciar sesion antes")
+                    showMessage("Debes iniciar sesion antes de ingresar")
                 }
             }
             }
