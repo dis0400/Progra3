@@ -124,7 +124,6 @@
                 android:text="@string/confirm"
                 android:textSize="20dp"/>
 
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

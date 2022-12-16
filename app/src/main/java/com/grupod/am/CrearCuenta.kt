@@ -12,8 +12,6 @@ import com.google.firebase.ktx.Firebase
 import com.grupod.am.databinding.ActivityCrearCuentaBinding
 import com.grupod.am.databinding.ActivityFormularioBinding
 
-
-
 class CrearCuenta : AppCompatActivity() {
     private lateinit var binding: ActivityCrearCuentaBinding
     private lateinit var auth: FirebaseAuth
