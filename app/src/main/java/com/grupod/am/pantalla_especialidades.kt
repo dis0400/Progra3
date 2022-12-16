@@ -14,14 +14,14 @@ import com.grupod.am.databinding.ActivityPantallaEspecialidadesBinding
 
 class pantalla_especialidades : AppCompatActivity() {
 
-    private lateinit var binding: pantalla_especialidades
-    private lateinit var preferece: SharedPreferences
-    var spinnerSelect: ""
+    private lateinit var binding: ActivityPantallaEspecialidadesBinding
+    private lateinit var preferences: SharedPreferences
+    var spinnerSelected: ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityPantallaEspecialidadesBinding.inflate(layoutInflater)
+        binding = ActivityPantallaEspecialidadesBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initSpinner()
         managePreferences()
@@ -40,39 +40,26 @@ class pantalla_especialidades : AppCompatActivity() {
             dataList
         )
 
-        binding.spinnerSelect.adapter = adapter
-        binding.spinnerSelect.onItemSelectedListener = object:
+        binding.spinner.adapter = adapter
+        binding.spinner.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-                binding.textViewSelectedSpinner.text = dataList[position]
-                spinnerSelect = dataList[position]
+                spinnerSelected = dataList[position]
                 Toast.makeText(this@pantalla_especialidades,"Seleccionaste una especialidad",Toast.LENGTH_SHORT).show();
             }
             override fun OnNothingSelected(p0: AdapterView<*>?){
                 }
-
-
             }
         }
-    }
-    fun managePreferences() {
-        val id = "ID"
-        preferece = PreferenceManager.getDefaultSharedPreferences(this)
-        binding.buttonSave.setOnClickListener {
-            val editor = preferece.edit()
-            var savedData = ""
-            if (binding.checkbox.isCheked)
-                savedData = "$spinnerSelect"
-            editor.putString(id, savedData)
-            editor.apply
-        }
-        binding.buttonShow.setOnClickListener {
-            val data = preferece.getString(id, "No se guardo nada")
-            binding.textSaveData.text = "${getString(R.string.saved_data)} $data"
-        }
-        binding.buttonDelete.setonClickListener {
-            editor.remove(id)
-            editor.apply()
+    fun managePreferences(){
+        val id = "nuestro_Id"
+        preferences=PreferenceManager.getDefaultSharedPreferences(this)
+        binding.spinner.setOnClickListener{ this
+        val editor = preferences.edit()
+        var savedData = ""
+        savedData = spinnerSelected
+        editor.putString(id, savedData)
+        editor.apply()
         }
     }
-}
+    }

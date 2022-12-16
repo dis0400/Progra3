@@ -13,6 +13,27 @@
         android:theme="@style/Theme.AM"
         tools:targetApi="31">
         <activity
+            android:name=".horario3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Horario2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Horario1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ItemDoctores"
             android:exported="false">
             <meta-data

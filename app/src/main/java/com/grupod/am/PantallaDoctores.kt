@@ -3,14 +3,11 @@ package com.grupod.am
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.Adapter
-import com.grupod.am.PantallaDoctores
-import com.grupod.am.adapter
 import com.grupod.am.databinding.ActivityPantallaDoctoresBinding
 
 
 class PantallaDoctores : AppCompatActivity() {
-    private lateinit var binding: ActivityPantallaDoctores
+    private lateinit var binding: ActivityPantallaDoctoresBinding
     private val Adapter by lazy{(Adapter)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +22,7 @@ class PantallaDoctores : AppCompatActivity() {
         mutableList.add("Katherine Erika Rodriguez Ortiz")
         mutableList.add("Volkmar Jose Bauer Barragan")
         mutableList.add("Elenea Cristina Cuellar Zumaran")
-        Adapter.addPantallaDoctores(mutableList)
+        Adapter.addActivityPantallaDoctores(mutableList)
         binding.recyclerExample.apply{
             layoutManager =
                 LinearLayoutManager (context, LinearLayoutManager.VERTICAL, false)
